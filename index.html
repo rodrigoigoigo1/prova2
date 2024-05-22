@@ -25,48 +25,77 @@
         .button-link:hover {
             background-color: #0056b3;
         }
+        /* Estilos para o menu */
+        nav {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+        }
+        nav ul li a:hover {
+            color: #007BFF;
+        }
     </style>
 </head>
 <body>
 
-   <div class="container">
-       <div class="product">
-           <div class="image">
-               <img class="product-image" src="images/orange.png" alt="">
-           </div>
-           <div class="color">
-               <span class="orange active" data-image="orange.jpg" data-color="#DE522F"></span>
-               <span class="green" data-image="green.jpg" data-color="#9ABE62"></span>
-               <span class="black" data-image="black.jpg" data-color="#222627"></span>
-               <span class="red" data-image="red.jpg" data-color="#B41D26"></span>
-           </div>
-           <div class="title">
-               Instrumentos disponiveis
-           </div>
-           <div class="detail">
-               <p>Price : <span>$50</span></p>
-               <a href="http://www.youtube.com/@rodrigo45554555">Add To Cart</a>
-           </div>
-       </div>
-   </div>
+    <!-- Menu de navegação -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="contato.html">Contato</a></li>
+            <li><a href="banda.html">O básico para se montar uma banda</a></li>
+        </ul>
+    </nav>
 
-   <div class="center">
-       <a href="https://rodrigoigoigo1.github.io/curriculo/" class="button-link">Minhas Informações</a>
-   </div>
+    <div class="container">
+        <div class="product">
+            <div class="image">
+                <img class="product-image" src="images/orange.png" alt="">
+            </div>
+            <div class="color">
+                <span class="orange active" data-image="orange.jpg" data-color="#DE522F"></span>
+                <span class="green" data-image="green.jpg" data-color="#9ABE62"></span>
+                <span class="black" data-image="black.jpg" data-color="#222627"></span>
+                <span class="red" data-image="red.jpg" data-color="#B41D26"></span>
+            </div>
+            <div class="title">
+                Instrumentos disponiveis
+            </div>
+            <div class="detail">
+                <p>Price : <span>$50</span></p>
+                <a href="http://www.youtube.com/@rodrigo45554555">Veja minha banda</a>
+            </div>
+        </div>
+    </div>
 
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <div class="center">
+        <a href="https://rodrigoigoigo1.github.io/curriculo/" class="button-link">Minhas Informações</a>
+    </div>
 
-   <script>
-       $(".color span").click(function(){
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-        $(".color span").removeClass("active");
-        $(this).addClass("active");
-        $(".detail span").css("color",$(this).attr("data-color"));
-        $(".detail a").css("background",$(this).attr("data-color"));
-        $(".product-image").attr("src",$(this).attr("data-image"));
-        $("body").css("background",$(this).attr("data-color"));
-       });
-   </script>
+    <script>
+        $(".color span").click(function(){
+            $(".color span").removeClass("active");
+            $(this).addClass("active");
+            $(".detail span").css("color",$(this).attr("data-color"));
+            $(".detail a").css("background",$(this).attr("data-color"));
+            $(".product-image").attr("src",$(this).attr("data-image"));
+            $("body").css("background",$(this).attr("data-color"));
+        });
+    </script>
 
 </body>
 </html>
