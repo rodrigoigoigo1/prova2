@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Foto na Metade da Tela</title>
+    <title>Foto Centralizada</title>
     <style>
         body, html {
             margin: 0;
@@ -12,18 +12,17 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            background-color: #f0f0f0;
         }
-        .container {
-            width: 100%;
-            height: 50%;
-            background-image: url('banda.jpg');
-            background-size: cover;
-            background-position: center;
+        .container img {
+            max-width: 100%;
+            max-height: 100%;
         }
     </style>
 </head>
 <body>
-    background-image: url('banda.jpg');
-    <div class="container"></div>
+    <div class="container">
+        <img src="banda.jpg" alt="Banda">
+    </div>
 </body>
-</html>
+</html
