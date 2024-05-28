@@ -21,6 +21,7 @@
             background-color: #007BFF;
             text-decoration: none;
             border-radius: 5px;
+            transition: background-color 0.3s;
         }
         .button-link:hover {
             background-color: #0056b3;
@@ -68,13 +69,13 @@
         <div class="container">
             <div class="product">
                 <div class="image">
-                    <img class="product-image" src="images/orange.png" alt="Imagem do Produto">
+                    <img class="product-image" src="images/orange.jpg" alt="Imagem do Produto">
                 </div>
                 <div class="color">
-                    <span class="orange active" data-image="orange.jpg" data-color="#DE522F"></span>
-                    <span class="green" data-image="green.jpg" data-color="#9ABE62"></span>
-                    <span class="black" data-image="black.jpg" data-color="#222627"></span>
-                    <span class="red" data-image="red.jpg" data-color="#B41D26"></span>
+                    <span class="orange active" data-image="images/orange.jpg" data-color="#DE522F"></span>
+                    <span class="green" data-image="images/green.jpg" data-color="#9ABE62"></span>
+                    <span class="black" data-image="images/black.jpg" data-color="#222627"></span>
+                    <span class="red" data-image="images/red.jpg" data-color="#B41D26"></span>
                 </div>
                 <div class="title">
                     Instrumentos disponíveis
@@ -100,10 +101,8 @@
             $(".detail span").css("color", $(this).attr("data-color"));
             $(".detail a").css("background", $(this).attr("data-color"));
             $(".product-image").attr("src", $(this).attr("data-image"));
-            $("body").css("background", $(this).attr("data-color"));
         });
     </script>
 
 </body>
 </html>
-
