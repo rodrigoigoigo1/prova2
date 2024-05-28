@@ -2,7 +2,6 @@
 
 /* Variáveis */
 :root {
-    --main-bg-color: #DE522F;
     --secondary-bg-color: #fafafa;
     --primary-color: #DE522F;
     --green-color: #9ABE62;
@@ -22,7 +21,8 @@ body {
     width: 100%;
     height: 100vh;
     position: relative;
-    background: var(--main-bg-color);
+    background: url('fundo.jpg') no-repeat center center fixed;
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -96,7 +96,7 @@ body {
 }
 
 .product .color .orange {
-    background: var(--orange-color);
+    background: var(--primary-color);
 }
 
 .product .color .active::after {
